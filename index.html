@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-email" viewBox="0 0 24 24">
+        <path d="M4 5h16v14H4z" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="2" />
+      </symbol>
+      <symbol id="icon-linkedin" viewBox="0 0 24 24">
+        <path d="M6.5 10v8" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M6.5 6v.01" fill="none" stroke="currentColor" stroke-width="3" />
+        <path d="M11 18v-8" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M11 13.5c0-2 1.25-3.5 3.25-3.5S18 11.4 18 14v4" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M4 3h16v18H4z" fill="none" stroke="currentColor" stroke-width="2" />
+      </symbol>
+      <symbol id="icon-github" viewBox="0 0 24 24">
+        <path d="M9 19c-5 1.5-5-2.5-7-3" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M15 22v-3.5c.1-1-.25-1.75-.75-2.25 2.5-.3 5.25-1.25 5.25-5.5 0-1.25-.45-2.25-1.2-3.05.1-.3.5-1.55-.15-3.15 0 0-1-.3-3.25 1.2a11 11 0 0 0-5.9 0C6.75 4.25 5.75 4.55 5.75 4.55 5.1 6.15 5.5 7.4 5.6 7.7 4.85 8.5 4.4 9.5 4.4 10.75c0 4.2 2.75 5.2 5.25 5.5-.4.35-.75 1-.75 2V22" fill="none" stroke="currentColor" stroke-width="2" />
+      </symbol>
+      <symbol id="icon-scholar" viewBox="0 0 24 24">
+        <path d="M3 9 12 4l9 5-9 5-9-5Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+        <path d="M7 12v4c0 1.6 2.25 3 5 3s5-1.4 5-3v-4" fill="none" stroke="currentColor" stroke-width="2" />
+        <path d="M20 10v6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </symbol>
+      <symbol id="doodle-robot" viewBox="0 0 220 220">
+        <path d="M110 21v28" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+        <circle cx="110" cy="16" r="8" fill="none" stroke="currentColor" stroke-width="5" />
+        <rect x="48" y="53" width="124" height="96" rx="24" fill="none" stroke="currentColor" stroke-width="5" />
+        <circle cx="86" cy="94" r="12" fill="none" stroke="currentColor" stroke-width="5" />
+        <circle cx="134" cy="94" r="12" fill="none" stroke="currentColor" stroke-width="5" />
+        <path d="M82 124c17 14 39 14 56 0" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+        <path d="M48 91H24m172 0h-24M74 149v33m72-33v33M60 183h40m20 0h40" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+        <path d="M36 166c-9-8-16-20-18-34M184 166c9-8 16-20 18-34" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+      </symbol>
+    </svg>
+
+    <header class="topbar">
+      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="brand" href="#home">Anandi Arora</a>
+    </header>
+
+    <nav class="side-menu" aria-label="Portfolio sections">
+      <a class="active" href="#home">Home</a>
+      <a href="#about">About Me</a>
+      <a href="#projects">Projects</a>
+      <a href="#publication">Publication</a>
+      <a href="#fun-stuff">Fun Stuff</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+      <section class="slide hero active" id="home">
+        <p class="welcome-text">Welcome to</p>
+        <h1 class="hero-title">Anandi Arora's Portfolio</h1>
+        <div class="hero-copy">
+          <p>
+            Hi, I’m Anandi Arora, an M.S. Robotics student at the University of Michigan interested in human-centered robot design, social robotics, and HRI. I am interested in exploring how a robot’s physical form, motion, behavior, and aesthetics can make it more legible, trustworthy, useful, and engaging for the people it serves.
+          </p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <svg class="robot-doodle main-robot"><use href="#doodle-robot"></use></svg>
+        </div>
+        <div class="social-links" aria-label="Social links">
+          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
+          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
+          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
+        </div>
+      </section>
+
+      <section class="slide section" id="about">
+        <h2 class="section-label">About Me</h2>
+        <p>
+          I am an M.S. Robotics student at the University of Michigan with a background in artificial intelligence and a growing focus on human-centered robotics. My interests lie at the intersection of human-robot interaction, social robotics, embodied design, and real-world robotic systems.
+
+          I want to explore how robots should look, move, and behave to be understandable, trustworthy, and useful in human environments. I am especially interested in the design side of HRI, where a robot’s physical form, motion, spatial behavior, and materiality are treated as central parts of the interaction, not just secondary features of the platform.
+
+          Through coursework, research, and hands-on projects, I am building experience across software, hardware integration, prototyping, and robot deployment. I am motivated by robotics that directly supports people, whether through assistive systems, social robots, or human-centered technologies that make everyday interactions more meaningful and accessible.
+        </p>
+        <div class="social-links" aria-label="Social links">
+          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
+          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
+          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
+        </div>
+      </section>
+
+      <section class="slide section grid-section" id="projects">
+        <h2 class="section-label">Projects</h2>
+        <p><b>Selected Work</b></p>
+        <div class="project-grid">
+          <article class="project-card" data-project="portfolio">
+            <div class="project-image project-image-one">
+              <img src="assets/personal-portfolio-home.png" alt="Screenshot of Anandi Arora's portfolio home page" />
+            </div>
+            <div class="project-meta">
+              <span>May 2026 - Present</span>
+              <h3>Personal Portfolio Website</h3>
+              <p>Designed and built a personal robotics portfolio to showcase projects in HRI, robot design, AI, multi-robot systems, and prototyping.</p>
+            </div>
+            <ul class="tag-list">
+              <li>Web Development</li>
+              <li>UX</li>
+              <li>Branding</li>
+              <li>HTML/CSS/JS</li>
+            </ul>
+            <button class="view-project" type="button" data-project="portfolio">View Project</button>
+          </article>
+          <article class="project-card" data-project="campus-safety">
+            <div class="project-image project-image-three">
+              <img src="assets/one-click-to-safety.png" alt="One Click to Safety project title slide" />
+            </div>
+            <div class="project-meta">
+              <span>Feb 2026 - Present</span>
+              <h3>One Click to Safety: Reimagining Campus Security at UMich</h3>
+              <p>A campus safety platform designed to help students access emergency resources and real-time support with fewer clicks.</p>
+            </div>
+            <ul class="tag-list">
+              <li>HCD</li>
+              <li>Campus Safety</li>
+              <li>UX Research</li>
+              <li>Social Impact</li>
+            </ul>
+            <button class="view-project" type="button" data-project="campus-safety">View Project</button>
+          </article>
+          <article class="project-card" data-project="smart-sort">
+            <div class="project-image project-image-four">
+              <img src="assets/smart-industrial-sort.png" alt="Smart Industrial Sort conveyor belt prototype" />
+            </div>
+            <div class="project-meta">
+              <span>Apr 2026 - May 2026</span>
+              <h3>Smart Industrial Sort</h3>
+              <p>Built a sensor-driven conveyor prototype that detects and sorts defective objects using Arduino, IR sensing, and servo actuation.</p>
+            </div>
+            <ul class="tag-list">
+              <li>Arduino</li>
+              <li>Sensors</li>
+              <li>Actuation</li>
+              <li>Mechatronics</li>
+            </ul>
+            <button class="view-project" type="button" data-project="smart-sort">View Project</button>
+          </article>
+          <article class="project-card" data-project="qcars">
+            <div class="project-image project-image-two" aria-label="Portfolio interface project image"></div>
+            <div class="project-meta">
+              <span>Jan 2026 - May 2026</span>
+              <h3>Controller for QCars</h3>
+              <p>Developed ROS-based trajectory tracking and centralized control for QCars using OptiTrack.</p>
+            </div>
+            <ul class="tag-list">
+              <li>ROS</li>
+              <li>OptiTrack</li>
+              <li>Control</li>
+              <li>Multi-Robot</li>
+            </ul>
+            <button class="view-project" type="button" data-project="qcars">View Project</button>
+          </article>
+          <article class="project-card" data-project="robot-navigation">
+            <div class="project-image project-image-six" aria-label="Robot navigation simulation project image"></div>
+            <div class="project-meta">
+              <span>Nov 2025 - Dec 2025</span>
+              <h3>A Hitchhiker's Guide to Robot Navigation</h3>
+              <p>Benchmarked Leader-Follower robot navigation against MPC in dense simulated crowds.</p>
+            </div>
+            <ul class="tag-list">
+              <li>HRI</li>
+              <li>Social Navigation</li>
+              <li>MPC</li>
+              <li>Python</li>
+            </ul>
+            <button class="view-project" type="button" data-project="robot-navigation">View Project</button>
+          </article>
+          <article class="project-card" data-project="wingmate">
+            <div class="project-image project-image-five" aria-label="Mobile app architecture project image"></div>
+            <div class="project-meta">
+              <span>Sep 2025 - Nov 2025</span>
+              <h3>Wingmate Dating App</h3>
+              <p>Designed the technical architecture and mobile deployment strategy for an AI-powered dating app.</p>
+            </div>
+            <ul class="tag-list">
+              <li>Architecture</li>
+              <li>Product Strategy</li>
+              <li>AI Apps</li>
+              <li>Backend Design</li>
+            </ul>
+            <button class="view-project" type="button" data-project="wingmate">View Project</button>
+          </article>
+          <article class="project-card" data-project="wildlife">
+            <div class="project-image project-image-seven" aria-label="Computer vision wildlife monitoring project image"></div>
+            <div class="project-meta">
+              <span>Oct 2024 - May 2025</span>
+              <h3>Wildlife Monitoring System</h3>
+              <p>Built and deployed a YOLOv8-based wildlife detection system for identifying 12 animal species.</p>
+            </div>
+            <ul class="tag-list">
+              <li>YOLOv8</li>
+              <li>Computer Vision</li>
+              <li>Flask</li>
+              <li>Deep Learning</li>
+            </ul>
+            <button class="view-project" type="button" data-project="wildlife">View Project</button>
+          </article>
+        </div>
+
+        <p class="additional-heading"><b>Additional Projects</b></p>
+        <div class="project-grid additional-projects">
+          <article class="project-card compact-card" data-project="iot-kitchen">
+            <div class="project-image project-image-eight" aria-label="IoT kitchen safety survey project image"></div>
+            <div class="project-meta">
+              <span>Survey Project</span>
+              <h3>IoT-Based Smart Kitchen System</h3>
+              <p>Surveyed IoT kitchen safety systems using gas, temperature, Arduino, GSM, and wireless communication technologies.</p>
+            </div>
+            <ul class="tag-list">
+              <li>IoT</li>
+              <li>Arduino</li>
+              <li>Sensors</li>
+              <li>GSM</li>
+            </ul>
+            <button class="view-project" type="button" data-project="iot-kitchen">View Project</button>
+          </article>
+          <article class="project-card compact-card" data-project="youtube-analysis">
+            <div class="project-image project-image-nine" aria-label="YouTube data analysis project image"></div>
+            <div class="project-meta">
+              <span>Data Analysis Project</span>
+              <h3>Top 100 YouTube Channels Analysis</h3>
+              <p>Used logistic regression and Scikit-learn to classify YouTube channel success based on subscriber metrics.</p>
+            </div>
+            <ul class="tag-list">
+              <li>Python</li>
+              <li>Scikit-learn</li>
+              <li>Logistic Regression</li>
+              <li>Kaggle</li>
+            </ul>
+            <button class="view-project" type="button" data-project="youtube-analysis">View Project</button>
+          </article>
+          <article class="project-card compact-card" data-project="music-system">
+            <div class="project-image project-image-ten" aria-label="Music management system project image"></div>
+            <div class="project-meta">
+              <span>Software Design Project</span>
+              <h3>Music Management System</h3>
+              <p>Designed UML diagrams and built a C++ object-oriented music management system for concert coordination.</p>
+            </div>
+            <ul class="tag-list">
+              <li>C++</li>
+              <li>UML</li>
+              <li>OOP</li>
+              <li>System Design</li>
+            </ul>
+            <button class="view-project" type="button" data-project="music-system">View Project</button>
+          </article>
+        </div>
+        <div class="social-links" aria-label="Social links">
+          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
+          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
+          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
+        </div>
+      </section>
+
+      <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal-panel">
+          <div class="modal-topbar">
+            <span>Project Details</span>
+            <button class="modal-close" type="button" aria-label="Close project details">&times;</button>
+          </div>
+          <div class="modal-image"></div>
+          <p class="modal-timeline"></p>
+          <h2 id="modal-title"></h2>
+          <p class="modal-summary"></p>
+          <div class="modal-grid">
+            <section>
+              <h3>Overview</h3>
+              <p class="modal-description"></p>
+            </section>
+            <section>
+              <h3>My Role</h3>
+              <p class="modal-role"></p>
+            </section>
+            <section>
+              <h3>Tools &amp; Technologies</h3>
+              <p class="modal-tools"></p>
+            </section>
+            <section>
+              <h3>Process / Method</h3>
+              <p class="modal-methods"></p>
+            </section>
+            <section>
+              <h3>Results / Outcome</h3>
+              <p class="modal-results"></p>
+            </section>
+            <section>
+              <h3>Photos / Demo</h3>
+              <p class="modal-photos"></p>
+            </section>
+            <section>
+              <h3>Collaborators</h3>
+              <p class="modal-collaborators"></p>
+            </section>
+          </div>
+          <!-- <h3 class="modal-links-heading">Links</h3>
+          <div class="modal-links">
+            <a class="modal-demo" href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+            <a class="modal-github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a class="modal-collaborator" href="#" target="_blank" rel="noopener noreferrer">Collaborator LinkedIn</a>
+          </div> -->
+          <section>
+              <h3>Awards</h3>
+              <p class="modal-awards"></p>
+            </section>
+        </div>
+      </div>
+
+      <section class="slide section" id="publication">
+        <p class="section-label">Publication</p>
+        <h2>Research and Writing</h2>
+        <div class="info-stack">
+          <article class="info-block">
+            <h3>Object Detection Powered Wildlife Monitoring System</h3>
+            <p>IEEE, June 20, 2025.</p>
+            <p>Related to the YOLOv8 wildlife monitoring project, covering object detection for identifying wildlife species through a deployed detection pipeline.</p>
+          </article>
+        </div>
+        <div class="social-links" aria-label="Social links">
+          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
+          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
+          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
+        </div>
+      </section>
+
+      <section class="slide section gallery" id="fun-stuff">
+        <p class="section-label">Fun Stuff</p>
+        <h2>Outside of Robotics</h2>
+        <div class="info-stack">
+        
+        <p>Outside of robotics, I enjoy reading, writing poetry and reflections, trying new food places, visiting museums and bookstores, and staying active at the gym. I am also a trained Kathak dancer and love a good adventure.</p>  <!-- <p>Outside of robotics, you’ll usually find me at the gym, reading books, trying new food places, or writing poetry, songs, quotes, and small reflections. During holidays, I love traveling, visiting museums, watching movies, exploring bookstores, and saying yes to the occasional adventure. Sundays are my solo reset days, usually spent indoors, slow and quiet. Fun facts: I am a trained Kathak dancer, and my first rollercoaster was Formula Rossa, which I rode alone at 13.</p> -->
+        </div>
+        <div class="social-links" aria-label="Social links">
+          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
+          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
+          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
+        </div>
+      </section>
+
+      <section class="slide section contact" id="contact">
+        <h2 class="section-label">Contact Me</h2>
+        <p>Let’s build something thoughtful, useful, and memorable.</p>
+        <a href="mailto:anandiar@umich.edu" target="_blank" rel="noopener noreferrer">anandiar@umich.edu</a>
+        <div class="social-links" aria-label="Social links">
+          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
+          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
+          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
+          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
