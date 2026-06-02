@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
@@ -71,22 +71,19 @@
     </svg>
 
     <header class="topbar">
-      <button class="menu-button" type="button" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <a class="brand" href="#home">Anandi Arora</a>
+      <a class="brand" href="#home">
+        <span>Anandi Arora</span>
+        <svg class="brand-robot" aria-hidden="true"><use href="#doodle-robot"></use></svg>
+      </a>
+      <nav class="top-nav" aria-label="Portfolio sections">
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#publication">Publication</a>
+        <a href="#fun-stuff">Fun Stuff</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
-
-    <nav class="side-menu" aria-label="Portfolio sections">
-      <a class="active" href="#home">Home</a>
-      <a href="#about">About Me</a>
-      <a href="#projects">Projects</a>
-      <a href="#publication">Publication</a>
-      <a href="#fun-stuff">Fun Stuff</a>
-      <a href="#contact">Contact</a>
-    </nav>
 
     <main>
       <section class="slide hero active" id="home">
@@ -117,12 +114,6 @@
 
           Through coursework, research, and hands-on projects, I am building experience across software, hardware integration, prototyping, and robot deployment. I am motivated by robotics that directly supports people, whether through assistive systems, social robots, or human-centered technologies that make everyday interactions more meaningful and accessible.
         </p>
-        <div class="social-links" aria-label="Social links">
-          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
-          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
-          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
-          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
-        </div>
       </section>
 
       <section class="slide section grid-section" id="projects">
@@ -134,7 +125,7 @@
               <img src="assets/personal-portfolio-home.png" alt="Screenshot of Anandi Arora's portfolio home page" />
             </div>
             <div class="project-meta">
-              <span>May 2026 - Present</span>
+              <span>Summer 2026</span>
               <h3>Personal Portfolio Website</h3>
               <p>Designed and built a personal robotics portfolio to showcase projects in HRI, robot design, AI, multi-robot systems, and prototyping.</p>
             </div>
@@ -145,6 +136,25 @@
               <li>HTML/CSS/JS</li>
             </ul>
             <button class="view-project" type="button" data-project="portfolio">View Project</button>
+          </article>
+          <article class="project-card" data-project="webby">
+            <div class="project-image project-image-eleven">
+              <img src="assets/webby.png" alt="Webby outreach drawing robot title slide" />
+            </div>
+            <div class="project-meta">
+              <span>Inspired4Robotics Hackathon</span>
+              <h3>Webby: The Outreach Drawing Robot</h3>
+              <p>An interactive outreach robot that draws and signs visitor names as personalized take-home artifacts.</p>
+            </div>
+            <ul class="tag-list">
+              <li>HRI</li>
+              <li>Outreach Robotics</li>
+              <li>Robotics Design</li>
+              <li>Hackathon</li>
+              <li>Interactive Robot</li>
+              <li>GUI + Servo</li>
+            </ul>
+            <button class="view-project" type="button" data-project="webby">View Project</button>
           </article>
           <article class="project-card" data-project="campus-safety">
             <div class="project-image project-image-three">
@@ -211,7 +221,9 @@
             <button class="view-project" type="button" data-project="robot-navigation">View Project</button>
           </article>
           <article class="project-card" data-project="wingmate">
-            <div class="project-image project-image-five" aria-label="Mobile app architecture project image"></div>
+            <div class="project-image project-image-five">
+              <img src="assets/wingmate.png" alt="Wingmate app title slide with owl logo" />
+            </div>
             <div class="project-meta">
               <span>Sep 2025 - Nov 2025</span>
               <h3>Wingmate Dating App</h3>
@@ -290,12 +302,6 @@
             <button class="view-project" type="button" data-project="music-system">View Project</button>
           </article>
         </div>
-        <div class="social-links" aria-label="Social links">
-          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
-          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
-          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
-          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
-        </div>
       </section>
 
       <div class="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
@@ -344,10 +350,10 @@
             <a class="modal-github" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
             <a class="modal-collaborator" href="#" target="_blank" rel="noopener noreferrer">Collaborator LinkedIn</a>
           </div> -->
-          <section>
-              <h3>Awards</h3>
-              <p class="modal-awards"></p>
-            </section>
+          <section class="modal-awards-section" hidden>
+            <h3 class="modal-awards-heading">Awards</h3>
+            <p class="modal-awards"></p>
+          </section>
         </div>
       </div>
 
@@ -361,26 +367,26 @@
             <p>Related to the YOLOv8 wildlife monitoring project, covering object detection for identifying wildlife species through a deployed detection pipeline.</p>
           </article>
         </div>
-        <div class="social-links" aria-label="Social links">
-          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
-          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
-          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
-          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
-        </div>
       </section>
 
       <section class="slide section gallery" id="fun-stuff">
         <p class="section-label">Fun Stuff</p>
         <h2>Outside of Robotics</h2>
         <div class="info-stack">
-        
-        <p>Outside of robotics, I enjoy reading, writing poetry and reflections, trying new food places, visiting museums and bookstores, and staying active at the gym. I am also a trained Kathak dancer and love a good adventure.</p>  <!-- <p>Outside of robotics, you’ll usually find me at the gym, reading books, trying new food places, or writing poetry, songs, quotes, and small reflections. During holidays, I love traveling, visiting museums, watching movies, exploring bookstores, and saying yes to the occasional adventure. Sundays are my solo reset days, usually spent indoors, slow and quiet. Fun facts: I am a trained Kathak dancer, and my first rollercoaster was Formula Rossa, which I rode alone at 13.</p> -->
+          <p>Outside of robotics, I enjoy spending my time in ways that keep me creative, curious, and grounded. I write poetry and reflections, sketch, make small arts and crafts projects, explore bookstores, museums, and new food places, and have recently started learning different cuisines through cooking. I also enjoy staying active through the gym and sports, unwinding with online games, volunteering when I can, and saying yes to a good adventure.
+
+I am also a trained Kathak dancer, grew up in Central India, and hold a graduation certificate in mental arithmetic.</p>
+        <!-- <p> Outside of robotics, I enjoy spending my time in ways that feel creative, grounding, and fun. I like reading, writing poetry and reflections, exploring bookstores, trying new food places, visiting museums and planetariums, and occasionally just watching the stars. I also enjoy staying active through the gym and sports, unwinding with online games, and learning new cuisines through cooking, which has recently become a new hobby of mine. Creativity has always been a big part of who I am. I sketch, make small arts and crafts projects, and enjoy hands-on activities that let me slow down and make something with care. I am also a trained Kathak dancer, grew up in Central India, and hold a graduation certificate in mental arithmetic. Whenever I get the chance, I like volunteering for different causes and saying yes to a good adventure.</p> -->
+        <!-- <p>Outside of robotics, I enjoy reading, writing poetry and reflections, trying new food places, visiting museums and bookstores, and staying active at the gym. I am also a trained Kathak dancer and love a good adventure.</p>  <p>Outside of robotics, you’ll usually find me at the gym, reading books, trying new food places, or writing poetry, songs, quotes, and small reflections. During holidays, I love traveling, visiting museums, watching movies, exploring bookstores, and saying yes to the occasional adventure. Sundays are my solo reset days, usually spent indoors, slow and quiet. Fun facts: I am a trained Kathak dancer, and my first rollercoaster was Formula Rossa, which I rode alone at 13.</p> -->
         </div>
-        <div class="social-links" aria-label="Social links">
-          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
-          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
-          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
-          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
+        <div class="gallery-strip" aria-label="Personal photos and fun moments">
+          <img src="assets/photos/IMG_0250.jpeg" alt="Personal fun moment" />
+          <img src="assets/photos/50da1110-f660-40aa-b229-cd559197443a.jpeg" alt="Creative or travel moment" />
+          <img src="assets/photos/IMG_0248.jpeg" alt="Personal photo from outside robotics" />
+          <img src="assets/photos/88ee2483-4094-4b63-b1ca-9e2a79c57e79.jpeg" alt="Fun activity outside robotics" />
+          <img src="assets/photos/IMG_0232.jpeg" alt="Personal interest or outing" />
+          <img src="assets/photos/IMG_0228.jpeg" alt="Memorable personal photo" />
+          <img src="assets/photos/302dc2c3-ed0e-4435-8d3f-510e7800e958.jpeg" alt="Adventure or everyday moment" />
         </div>
       </section>
 
@@ -388,12 +394,6 @@
         <h2 class="section-label">Contact Me</h2>
         <p>Let’s build something thoughtful, useful, and memorable.</p>
         <a href="mailto:anandiar@umich.edu" target="_blank" rel="noopener noreferrer">anandiar@umich.edu</a>
-        <div class="social-links" aria-label="Social links">
-          <a href="mailto:anandiar@umich.edu" aria-label="Email" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-email"></use></svg></a>
-          <a href="https://www.linkedin.com/in/anandi624/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-linkedin"></use></svg></a>
-          <a href="https://github.com/anandiaroraa" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-github"></use></svg></a>
-          <a href="https://scholar.google.com/citations?user=k7CgW6YAAAAJ&hl=en" aria-label="Google Scholar" target="_blank" rel="noopener noreferrer"><svg><use href="#icon-scholar"></use></svg></a>
-        </div>
       </section>
     </main>
 

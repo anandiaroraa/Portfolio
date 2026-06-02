@@ -1,6 +1,4 @@
-const menuButton = document.querySelector(".menu-button");
-const sideMenu = document.querySelector(".side-menu");
-const menuLinks = document.querySelectorAll(".side-menu a");
+const menuLinks = document.querySelectorAll(".top-nav a");
 const internalLinks = document.querySelectorAll('a[href^="#"]');
 const slides = document.querySelectorAll(".slide");
 const tiles = document.querySelectorAll(".tile");
@@ -20,6 +18,8 @@ const modalCollaborators = document.querySelector(".modal-collaborators");
 // const modalDemo = document.querySelector(".modal-demo");
 // const modalGithub = document.querySelector(".modal-github");
 // const modalCollaborator = document.querySelector(".modal-collaborator");
+const modalAwardsSection = document.querySelector(".modal-awards-section");
+const modalAwardsHeading = document.querySelector(".modal-awards-heading");
 const modalAwards = document.querySelector(".modal-awards");
 
 const projectDetails = {
@@ -42,7 +42,29 @@ const projectDetails = {
     // demo: "https://github.com/anandiaroraa",
     // github: "https://github.com/anandiaroraa",
     // collaborator: "https://www.linkedin.com/in/anandi624/",
-    // awards: "Awards: Add portfolio showcases or recognition here."
+  },
+  webby: {
+    title: "Webby: The Outreach Drawing Robot",
+    timeline: "Inspired4Robotics Hackathon",
+    summary:
+      "Webby is an interactive outreach robot that makes robotics lab tours more memorable by drawing and signing a visitor's name as a personalized take-home artifact.",
+    imageClass: "project-image-eleven",
+    image: "assets/webby.png",
+    description:
+      "Traditional lab tours can feel passive for middle school and high school visitors: students walk through labs, listen to explanations, and often leave without a hands-on memory. Webby turns the tour into an interactive experience by combining a two-wheeled driving base, a pen servo mechanism, and a simple GUI where visitors enter their name.",
+    role:
+      "I contributed to the concept, robot interaction design, outreach framing, prototype development, and presentation/storytelling for the hackathon. As a team hackathon project, my work focused on shaping Webby into a robotics demo that felt approachable, educational, and memorable for younger visitors.",
+    tools:
+      "Human-Robot Interaction, outreach robotics, robotics design, hackathon prototyping, interactive robot design, GUI input, servo control, tele-operation, two-wheeled robot base.",
+    methods:
+      "Built around a GUI where visitors enter their name, a marker mounted on a servo for writing and drawing, and a mobile base that moves across the page as the canvas. The concept also includes tele-operation/control modes to demonstrate different robot operation styles and future expansion ideas such as a spider/web-themed design, painting, multi-tool arms, gripper/brush/marker attachments, and programmable activities for older students.",
+    results:
+      "Webby makes robotics outreach more memorable, educational, and interactive. It gives visitors something to learn and something to take home, making it especially useful for school tours, open houses, STEM outreach events, and lab visits where robotics should feel touchable, question-worthy, and easy to remember.",
+    photos:
+      "Designed for STEM outreach events, lab tours, school visits, and open houses.",
+    collaborators: "Team hackathon project.",
+    awardsHeading: "Achievement",
+    awards: "Secured 3rd position at the Inspired4Robotics Hackathon."
   },
   qcars: {
     title: "Controller for QCars",
@@ -62,7 +84,6 @@ const projectDetails = {
     // github: "https://github.com/anandiaroraa",
     collaborators: "Solo Project within the Fluent Robotics Lab.",
     // collaborators: "Fluent Robotics Lab, University of Michigan.",
-    // awards: "Awards: Add lab, course, or presentation recognition here."
   },
   "campus-safety": {
     title: "One Click to Safety: Reimagining Campus Security at UMich",
@@ -105,13 +126,13 @@ const projectDetails = {
     // github: "https://github.com/anandiaroraa",
     collaborators:
       '<a href="https://www.linkedin.com/in/purwa-anasane/" target="_blank" rel="noopener noreferrer">Purwa Anasane</a>',
-    // awards: "Awards: Add course recognition or demo showcase details here."
   },
   wingmate: {
     title: "Wingmate Dating App",
     timeline: "Sep 2025 - Nov 2025 | Ross School of Business, University of Michigan",
     summary: "Designed the technical architecture and mobile deployment strategy for an AI-powered dating app during a six-week innovation competition.",
     imageClass: "project-image-five",
+    image: "assets/wingmate.png",
     description:
       "Participated as the Technical Architect in a six-week Business+Tech innovation competition exploring technology, product strategy, and user-centered digital platforms.",
     role: "Technical Architect responsible for implementation strategy, backend planning, API framework, and database design.",
@@ -126,7 +147,6 @@ const projectDetails = {
     // collaborator: "https://www.linkedin.com/in/anandi624/",
     collaborators:
       '<a href="https://www.linkedin.com/in/kartikapinjarkar/" target="_blank" rel="noopener noreferrer">Kartika Pinjarkar</a>, <a href="https://www.linkedin.com/in/shirleygiraldo/" target="_blank" rel="noopener noreferrer">Shirley Giraldo</a>, <a href="https://www.linkedin.com/in/noelle-cho/" target="_blank" rel="noopener noreferrer">Noelle Cho</a>',
-    // awards: "Awards: Add competition placement or mentor feedback here."
   },
   "robot-navigation": {
     title: "A Hitchhiker's Guide to Robot Navigation",
@@ -146,7 +166,6 @@ const projectDetails = {
     // github: "https://github.com/anandiaroraa",
     // collaborator: "https://www.linkedin.com/in/anandi624/",
     collaborators: '<a href="https://www.linkedin.com/in/akshunn-trivedi/" target="_blank" rel="noopener noreferrer">Akshunn Trivedi</a>, <a href="https://www.linkedin.com/in/sebastian-helgeson/overlay/about-this-profile/" target="_blank" rel="noopener noreferrer">Sebastian Helgeson</a>',
-    // awards: "Awards: Add course recognition or presentation outcomes here."
   },
   wildlife: {
     title: "Object Detection-Powered Wildlife Monitoring System",
@@ -166,7 +185,8 @@ const projectDetails = {
     // github: "https://github.com/anandiaroraa",
     // collaborator: "https://www.linkedin.com/in/anandi624/",
     collaborators: "",
-    // awards: "Awards: Add publication details, final-year recognition, or demo outcomes here."
+    awardsHeading: "Paper Published",
+    awards: "IEEE, June 20, 2025."
   },
   "iot-kitchen": {
     title: "IoT-Based Smart Kitchen System Survey Project",
@@ -186,7 +206,6 @@ const projectDetails = {
     // github: "https://github.com/anandiaroraa",
     // collaborator: "https://www.linkedin.com/in/anandi624/",
     collaborators: "",
-    // awards: "Awards: Add related coursework or publication details here."
   },
   "youtube-analysis": {
     title: "Top 100 YouTube Channels Analysis",
@@ -206,7 +225,6 @@ const projectDetails = {
     // github: "https://github.com/anandiaroraa",
     // collaborator: "https://www.linkedin.com/in/anandi624/",
     collaborators: "",
-    // awards: "Awards: Add course or notebook recognition here."
   },
   "music-system": {
     title: "Music Management System",
@@ -226,15 +244,8 @@ const projectDetails = {
     // github: "https://github.com/anandiaroraa",
     // collaborator: "https://www.linkedin.com/in/anandi624/",
     collaborators: "",
-    // awards: "Awards: Add course recognition here."
   }
 };
-
-function closeMenu() {
-  menuButton.classList.remove("open");
-  sideMenu.classList.remove("open");
-  menuButton.setAttribute("aria-expanded", "false");
-}
 
 function showSlide(slideId) {
   const id = slideId || "home";
@@ -260,7 +271,7 @@ function openProjectModal(projectId) {
   if (modalImage) {
     modalImage.innerHTML = project.image
       ? `<img src="${project.image}" alt="${project.title} project screenshot">`
-      : "";
+      : project.visualHTML || "";
   }
   if (modalTimeline) modalTimeline.textContent = project.timeline;
   if (modalTitle) modalTitle.textContent = project.title;
@@ -275,7 +286,9 @@ function openProjectModal(projectId) {
   // if (modalDemo) modalDemo.href = project.demo;
   // if (modalGithub) modalGithub.href = project.github;
   // if (modalCollaborator) modalCollaborator.href = project.collaborator;
-  if (modalAwards) modalAwards.textContent = project.awards;
+  if (modalAwardsSection) modalAwardsSection.hidden = !project.awards;
+  if (modalAwardsHeading) modalAwardsHeading.textContent = project.awardsHeading || "Awards";
+  if (modalAwards) modalAwards.textContent = project.awards || "";
 
   projectModal.removeAttribute("hidden");
   modalClose?.focus();
@@ -285,12 +298,6 @@ function closeProjectModal() {
   projectModal?.setAttribute("hidden", "");
 }
 
-menuButton.addEventListener("click", () => {
-  const isOpen = menuButton.classList.toggle("open");
-  sideMenu.classList.toggle("open", isOpen);
-  menuButton.setAttribute("aria-expanded", String(isOpen));
-});
-
 internalLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const targetId = link.getAttribute("href").slice(1);
@@ -299,7 +306,6 @@ internalLinks.forEach((link) => {
       event.preventDefault();
       showSlide(targetId);
       history.pushState(null, "", `#${targetId}`);
-      closeMenu();
     }
   });
 });
@@ -329,7 +335,6 @@ projectModal?.addEventListener("click", (event) => {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
-    closeMenu();
     closeProjectModal();
   }
 });
