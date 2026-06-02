@@ -258,6 +258,10 @@ function showSlide(slideId) {
   menuLinks.forEach((link) => {
     link.classList.toggle("active", link.getAttribute("href") === `#${targetSlide.id}`);
   });
+
+  requestAnimationFrame(() => {
+    window.scrollTo(0, 0);
+  });
 }
 
 function openProjectModal(projectId) {
