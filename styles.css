@@ -784,31 +784,6 @@ h1 {
   margin: 0;
 }
 
-.gallery-strip {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 26px;
-  justify-self: center;
-}
-
-.gallery-strip img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border: 1px solid var(--black);
-  border-radius: 8px;
-  background: var(--white);
-  transition: transform 170ms ease, filter 170ms ease;
-}
-
-.gallery-strip img:hover {
-  transform: scale(1.04);
-}
-
 .contact > a {
   display: inline-flex;
   margin: 24px auto 0 auto;
@@ -895,8 +870,7 @@ h1 {
     max-width: 100%;
   }
 
-  .project-grid,
-  .gallery-strip {
+  .project-grid {
     grid-template-columns: 1fr 1fr;
   }
 
@@ -1022,8 +996,7 @@ h1 {
     line-height: 1.65;
   }
 
-  .project-grid,
-  .gallery-strip {
+  .project-grid {
     grid-template-columns: 1fr;
   }
 
